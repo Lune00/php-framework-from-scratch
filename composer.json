@@ -1,0 +1,18 @@
+{
+    "name": "moonpalace/miniframework",
+    "type": "project",
+    "authors": [
+        {
+            "name": "pschuhmacher",
+            "email": "paul.schuhmacher@studio-goliath.com"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.12"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Mini\\": "src/"
+        }
+    }
+}
