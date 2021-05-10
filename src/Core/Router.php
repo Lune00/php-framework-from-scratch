@@ -2,20 +2,22 @@
 
 namespace Mini\Core;
 
+
+
 class Router
 {
-    public function __construct()
+
+    public function resolve()
     {
-    }
+        $path = get_path();
+        $method = get_method();
+        $callback = Routes::find_callback($path, $method);
 
-    public function get(string $path, callable $f){
+        if (!is_callable($callback)) {
+            echo $callback;
+            return;
+        }
 
-    }
-
-    public function resolve(){
-
-        throw new \ErrorException('WTF?');
-        var_dump($_SERVER);
+        $callback();
     }
 }
-
